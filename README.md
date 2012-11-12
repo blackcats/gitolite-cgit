@@ -9,22 +9,27 @@ Installation
 * In your .gitolite.rc,
     * add the __CGIT_REPO_FILE__ variable with the path of the cgit 
       configuration file for the repository
+
         `CGIT_REPO_FILE              => '/etc/cgit.d/repos.conf',`
+
       This file must be writable by the gitolite user
     * add 'cgit\..\*' in the __GIT_CONFIG_KEYS__
+
         `GIT_CONFIG_KEYS             =>  'cgit\..*',`
+    
     * add the trigger 'cgitrc::update' in __POST_CREATE__ and __POST_COMPILE__
 
-        `POST_CREATE                 =>`
-        `    [
-        `        'post-compile/update-git-configs',`
-        `        # 'post-compile/update-gitweb-access-list',`
-        `        # 'post-compile/update-git-daemon-access-list',`
-        `        cgitrc::update,
-        `    ],`
+        `POST_CREATE                 =>
+             [
+                 'post-compile/update-git-configs',
+                 # 'post-compile/update-gitweb-access-list',
+                 # 'post-compile/update-git-daemon-access-list',
+                 cgitrc::update,
+             ],`
 
 * Configure cgit with the global option without insert any repo.\* options.
 * In this configuration file, insert the following line:
+
         `include=/etc/cgit.d/repos.conf`
 
 Usage
