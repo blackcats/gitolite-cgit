@@ -20,12 +20,12 @@ Installation
     * add the trigger 'cgitrc::update' in __POST_CREATE__ and __POST_COMPILE__
 
         POST_CREATE                 =>
-             [
+             \[
                  'post-compile/update-git-configs',
                  # 'post-compile/update-gitweb-access-list',
                  # 'post-compile/update-git-daemon-access-list',
                  cgitrc::update,
-             ],
+             \],
 
 * Configure cgit with the global option without insert any repo.\* options.
 * In this configuration file, insert the following line:
