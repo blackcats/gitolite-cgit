@@ -19,18 +19,18 @@ Installation
     
     * add the trigger 'cgitrc::update' in __POST_CREATE__ and __POST_COMPILE__
 
-        `POST_CREATE                 =>
-             \[
+        POST_CREATE                 =>
+             [
                  'post-compile/update-git-configs',
                  # 'post-compile/update-gitweb-access-list',
                  # 'post-compile/update-git-daemon-access-list',
                  cgitrc::update,
-             \],`
+             ],
 
 * Configure cgit with the global option without insert any repo.\* options.
 * In this configuration file, insert the following line:
 
-        `include=/etc/cgit.d/repos.conf`
+        include=/etc/cgit.d/repos.conf
 
 Usage
 =====
@@ -38,12 +38,12 @@ Usage
 * In the gitolite.conf file, add the cgit repo configuration options. Use the
   same option as cgit but replace the _repo_ with _cgit_. Exemple:
 
-        `repo workflow
+        repo workflow
             RW                    = @photo
             config cgit.section   = Dev
             config cgit.owner     = Wouam
             config cgit.name      = photo workflow
-            config cgit.desc      = Personnal scripts for my photography workflow`
+            config cgit.desc      = Personnal scripts for my photography workflow
 
 * The value for the cgit parameters __repo.url__ and __repo.path__ are not
   needed. Just add one __cgit.*__ in _gitolite.conf_ and they will be
