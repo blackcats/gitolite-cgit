@@ -21,9 +21,9 @@ Installation
 
         `POST_CREATE                 =>
              [
-                 'post-compile/update-git-configs',
-                 # 'post-compile/update-gitweb-access-list',
-                 # 'post-compile/update-git-daemon-access-list',
+                 \'post-compile/update-git-configs\',
+                 \# \'post-compile/update-gitweb-access-list\',
+                 \# \'post-compile/update-git-daemon-access-list\',
                  cgitrc::update,
              ],`
 
